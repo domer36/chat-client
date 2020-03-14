@@ -1,10 +1,10 @@
 <div class="box">
     Your username: 
-    <input *ngIf="!editable" readonly="true" matInput style="border: none;" type="text" [(ngModel)]="this.Chat.username">
+    <input maxlength="10" *ngIf="!editable" readonly="true" matInput style="border: none;" type="text" [(ngModel)]="this.Chat.username">
     <button *ngIf="!editable" mat-button matSuffix mat-icon-button aria-label="Change" (click)="editable= !editable">
       <mat-icon>edit</mat-icon>
     </button>
-    <input *ngIf="editable" matInput style="border: none;" type="text" [(ngModel)]="newusername">
+    <input maxlength="10" *ngIf="editable" matInput style="border: none;" type="text" [(ngModel)]="newusername">
     <button *ngIf="editable" mat-button matSuffix mat-icon-button aria-label="Change" (click)="ChangeUsername()">
       <mat-icon>save</mat-icon>
     </button>

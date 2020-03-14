@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  SERVER_CHAT: 'https://chat-domer36.herokuapp.com'
+  SERVER_CHAT: 'http://localhost:3000'
 };
 
 /*
