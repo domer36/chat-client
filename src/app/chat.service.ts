@@ -10,11 +10,13 @@ import * as io from 'socket.io-client'
 export class ChatService {
   public username = ''
   public total_users = 0
+  public socket_id = null
   private server = environment.SERVER_CHAT
   private socket
 
   constructor(private http:HttpClient) { 
     this.socket = io(this.server)
+    this.socket.on('connect', socket_id => this.socket_id = this.socket.id)
   }
 
   Connect() {
