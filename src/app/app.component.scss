@@ -21,6 +21,9 @@
     .container{
         .panel-left {
             width: 70%;
+            .totalUsers {
+                display: none;
+            }
         }
         .panel-right {
             display: inline-block;

@@ -12,6 +12,7 @@ import { MatInputModule, MatButtonModule, MatIconModule } from '@angular/materia
 import { MessagesComponent } from './components/messages/messages.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { UsernameComponent } from './components/username/username.component';
+import { TotalUsersComponent } from './components/total-users/total-users.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UsernameComponent } from './components/username/username.component';
     SendMessageComponent,
     MessagesComponent,
     UsersListComponent,
-    UsernameComponent
+    UsernameComponent,
+    TotalUsersComponent
   ],
   imports: [
     FormsModule,
