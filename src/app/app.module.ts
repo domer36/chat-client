@@ -11,13 +11,15 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule, MatButtonModule } from '@angular/material';
 import { MessagesComponent } from './components/messages/messages.component';
 import { UsersListComponent } from './users-list/users-list.component';
+import { UsernameComponent } from './components/username/username.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SendMessageComponent,
     MessagesComponent,
-    UsersListComponent
+    UsersListComponent,
+    UsernameComponent
   ],
   imports: [
     FormsModule,
