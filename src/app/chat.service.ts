@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core'
 import { Observable } from 'rxjs'
 import { HttpClient } from '@angular/common/http'
+import { environment } from './../environments/environment'
 import * as io from 'socket.io-client'
 
 @Injectable({
@@ -9,7 +10,7 @@ import * as io from 'socket.io-client'
 export class ChatService {
   public username = ''
   public total_users = 0
-  private server = 'http://localhost:3000/'
+  private server = environment.SERVER_CHAT
   private socket
 
   constructor(private http:HttpClient) { 
@@ -44,7 +45,7 @@ export class ChatService {
   }
 
   GetTotalUsers(){
-    this.http.get('http://localhost:3000/getTotalUsers')
+    this.http.get(`${this.server}/getTotalUsers`)
       .subscribe( (res:any) => this.total_users = res.total)
   }
 }
