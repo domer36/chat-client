@@ -9,11 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SendMessageComponent } from './components/send-message/send-message.component';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule, MatButtonModule } from '@angular/material';
+import { MessagesComponent } from './components/messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SendMessageComponent
+    SendMessageComponent,
+    MessagesComponent
   ],
   imports: [
     FormsModule,

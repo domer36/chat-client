@@ -8,7 +8,6 @@ import * as io from 'socket.io-client'
 })
 export class ChatService {
   public username = ''
-  public messages = []
   private server = 'http://localhost:3000/'
   private socket
 
@@ -29,10 +28,10 @@ export class ChatService {
   }
 
   GetMessages() {
-    Observable.create((observer) => {
+    return Observable.create((observer) => {
       this.socket.on('message', (message) => {
           observer.next(message)
       })
-  }).subscribe( message => this.messages.push(message))
+  })
   }
 }

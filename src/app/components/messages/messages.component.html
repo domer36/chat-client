@@ -1,0 +1,6 @@
+<div >
+    <p *ngFor="let item of messages">
+        <span>{{ item.username }}</span> says {{ item.message }}
+    </p>
+    {{ messages | json }}
+</div>
