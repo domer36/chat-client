@@ -15,8 +15,9 @@ export class ChatService {
     this.socket = io(this.server)
   }
 
-  Connect(usr) {
-
+  Connect() {
+    this.GetName()
+    this.socket.emit('add_user', this.username)
   }
 
   GetName() {
@@ -33,5 +34,11 @@ export class ChatService {
           observer.next(message)
       })
   })
+  }
+
+  GetUsers() {
+    return Observable.create( 
+      observer => this.socket.on('users', 
+        users_list => observer.next(users_list)))
   }
 }

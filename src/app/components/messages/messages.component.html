@@ -1,6 +1,5 @@
 <div >
     <p *ngFor="let item of messages">
-        <span>{{ item.username }}</span> says {{ item.message }}
+        <span>{{ item.username === this.Chat.username ? 'You say: ' : item.username + ' says ' }}</span> {{ item.message }}
     </p>
-    {{ messages | json }}
 </div>

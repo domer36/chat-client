@@ -8,8 +8,7 @@ import { ChatService } from './chat.service';
 })
 export class AppComponent {
   title = 'client';
-  constructor(private Chat:ChatService){
-    this.Chat.GetName()
-    this.Chat.GetMessages()
+  constructor(public Chat:ChatService){
+    this.Chat.Connect()
   }
 }
