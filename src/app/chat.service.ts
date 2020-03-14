@@ -50,4 +50,9 @@ export class ChatService {
     this.http.get(`${this.server}/getTotalUsers`)
       .subscribe( (res:any) => this.total_users = res.total)
   }
+
+  ChangeUsername( new_username ){
+    this.socket.emit('change_username', {id: this.socket_id, username: new_username})
+    this.username = new_username
+  }
 }
