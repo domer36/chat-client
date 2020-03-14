@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  SERVER_CHAT: 'https://chat-domer36.herokuapp.com'
 };
