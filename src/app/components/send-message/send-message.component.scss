@@ -1,0 +1,27 @@
+.send-chat {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    box-sizing: border-box;
+    
+    .box {
+        width: 95%;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        padding: 5px 20px;
+        box-sizing: border-box;
+    
+        input {
+            flex-grow: 11;
+        }
+        
+        button {
+            flex-grow: 1;
+            color: silver;
+        }
+    }
+}
+
+

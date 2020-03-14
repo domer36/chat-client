@@ -1,7 +1,7 @@
-<span>List users</span>
+<span>Users online</span>
 <ul class="list">
     <li *ngFor="let item of users" >
         {{ item === this.Chat.username ? 'You' : item}}
     </li>
 </ul>
-Total Users: {{ this.Chat.total_users | number}}
+<p><b>Total Users</b>: {{ this.Chat.total_users | number}}</p>

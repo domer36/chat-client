@@ -1,7 +1,8 @@
 <div class="messages_container">
     <div *ngFor="let item of messages" class="message" [ngClass]="{'owner_message': item.username === this.Chat.username}">
-        <p>
-            <span>{{ item.username === this.Chat.username ? 'You say ' : item.username + ' says ' }}</span> {{ item.message }}
-        </p>
+        <div>
+            <span>{{ item.username === this.Chat.username ? 'You say ' : item.username + ' says ' }}</span>
+            <p>{{ item.message }}</p>
+        </div>
     </div>
 </div>

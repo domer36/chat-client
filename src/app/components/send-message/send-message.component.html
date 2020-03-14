@@ -1,7 +1,8 @@
 <div class="send-chat">
-    <mat-form-field>
-      <mat-label>Write a message</mat-label>
-      <input matInput [(ngModel)]="message">
-    </mat-form-field>
-    <button mat-button color="primary" (click)="SendMessage()">Send</button>
+  <div class="box">
+    <input matInput style="border: none;" type="text" [(ngModel)]="message" placeholder="Write a message">
+    <button mat-button matSuffix mat-icon-button aria-label="Send" (click)="SendMessage()">
+      <mat-icon>send</mat-icon>
+    </button>
+  </div>
   </div>

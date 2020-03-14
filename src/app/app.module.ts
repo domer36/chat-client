@@ -8,9 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SendMessageComponent } from './components/send-message/send-message.component';
 import { FormsModule } from '@angular/forms';
-import { MatInputModule, MatButtonModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { MessagesComponent } from './components/messages/messages.component';
-import { UsersListComponent } from './users-list/users-list.component';
+import { UsersListComponent } from './components/users-list/users-list.component';
 import { UsernameComponent } from './components/username/username.component';
 
 @NgModule({
@@ -28,7 +28,8 @@ import { UsernameComponent } from './components/username/username.component';
     BrowserModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

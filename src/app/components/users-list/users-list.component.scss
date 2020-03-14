@@ -1,0 +1,23 @@
+span{
+    width: 100%;
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+p {
+    padding-left: 12px;
+}
+ul.list {
+    margin: 8px 0;
+    padding: 0 0px;
+    box-sizing: border-box;
+}
+ul.list > li {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 18px 12px;
+    border: 1px solid #040e29;
+    background-color: #0f2254;
+}
