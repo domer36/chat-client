@@ -10,12 +10,14 @@ import { SendMessageComponent } from './components/send-message/send-message.com
 import { FormsModule } from '@angular/forms';
 import { MatInputModule, MatButtonModule } from '@angular/material';
 import { MessagesComponent } from './components/messages/messages.component';
+import { UsersListComponent } from './users-list/users-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SendMessageComponent,
-    MessagesComponent
+    MessagesComponent,
+    UsersListComponent
   ],
   imports: [
     FormsModule,
