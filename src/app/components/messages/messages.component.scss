@@ -1,0 +1,25 @@
+.messages_container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.message {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.message > p {
+    max-width: 80%;
+}
+.message > p > span {
+    display: block;
+    font-weight: bold;
+    
+}
+.owner_message {
+    justify-content: flex-end;
+}
+
+.owner_message > p > span {
+    text-align: right;
+}
