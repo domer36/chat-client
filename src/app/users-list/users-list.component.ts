@@ -11,7 +11,10 @@ export class UsersListComponent implements OnInit {
   constructor(public Chat:ChatService) { }
 
   ngOnInit() {
-    this.Chat.GetUsers().subscribe( users => this.users = users)
+    this.Chat.GetUsers().subscribe( users => {
+      this.users = users
+      this.Chat.GetTotalUsers()
+    })
   }
 
 }

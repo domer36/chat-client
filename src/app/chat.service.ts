@@ -8,10 +8,11 @@ import * as io from 'socket.io-client'
 })
 export class ChatService {
   public username = ''
+  public total_users = 0
   private server = 'http://localhost:3000/'
   private socket
 
-  constructor() { 
+  constructor(private http:HttpClient) { 
     this.socket = io(this.server)
   }
 
@@ -40,5 +41,10 @@ export class ChatService {
     return Observable.create( 
       observer => this.socket.on('users', 
         users_list => observer.next(users_list)))
+  }
+
+  GetTotalUsers(){
+    this.http.get('http://localhost:3000/getTotalUsers')
+      .subscribe( (res:any) => this.total_users = res.total)
   }
 }
