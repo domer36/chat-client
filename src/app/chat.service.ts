@@ -20,18 +20,18 @@ export class ChatService {
   }
 
   Connect() {
+    // Init the connection
     this.GetName()
     this.socket.emit('add_user', this.username)
   }
 
-  GetName() {
-    this.username = `annon${Math.floor(Math.random() * 9999)}`
-  }
+  // Create our username random
+  GetName() { this.username = `annon${Math.floor(Math.random() * 9999)}` }
 
-  SendMessage( message ) {
-    this.socket.emit('message', {username: this.username, message})
-  }
+  // Send our username and message to the chat
+  SendMessage( message ) { this.socket.emit('message', {username: this.username, message}) }
 
+  // Wait for new messages
   GetMessages() {
     return Observable.create((observer) => {
       this.socket.on('message', (message) => {
@@ -40,12 +40,14 @@ export class ChatService {
   })
   }
 
+  // Get all users connected
   GetUsers() {
     return Observable.create( 
       observer => this.socket.on('users', 
         users_list => observer.next(users_list)))
   }
 
+  // Consulting the total users actived using the RESP API
   GetTotalUsers(){
     this.http.get(`${this.server}/getTotalUsers`)
       .subscribe( (res:any) => this.total_users = res.total)

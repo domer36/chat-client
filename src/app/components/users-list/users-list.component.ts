@@ -12,7 +12,10 @@ export class UsersListComponent implements OnInit {
 
   ngOnInit() {
     this.Chat.GetUsers().subscribe( users => {
+      // Keep all users connected
       this.users = users
+
+      // When a new user is connected, updated the TotalUsers using the REST API
       this.Chat.GetTotalUsers()
     })
   }

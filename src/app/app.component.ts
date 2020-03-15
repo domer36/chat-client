@@ -7,7 +7,7 @@ import { ChatService } from './chat.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'client';
+  title = 'client chat';
   constructor(public Chat:ChatService){
     this.Chat.Connect()
   }
