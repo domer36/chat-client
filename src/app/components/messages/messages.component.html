@@ -1,4 +1,4 @@
-<div class="messages_container">
+<div #message_container class="messages_container">
     <div *ngFor="let item of messages" class="message" [ngClass]="{'owner_message': item.id === this.Chat.socket_id}">
         <div>
             <span>{{ item.id === this.Chat.socket_id ? 'You say ' : item.username + ' says ' }}</span>

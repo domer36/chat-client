@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ChatService } from 'src/app/chat.service';
 
 @Component({
@@ -8,10 +8,16 @@ import { ChatService } from 'src/app/chat.service';
 })
 export class MessagesComponent implements OnInit {
   messages = []
-  constructor(public Chat:ChatService) { }
+
+  @ViewChild('message_container', {static: true}) mc: ElementRef;
+  
+  constructor(public Chat:ChatService, private elementRef: ElementRef) { }
 
   ngOnInit() {
-    this.Chat.GetMessages().subscribe( message => this.messages.push(message))  
+    this.Chat.GetMessages().subscribe( message => {
+      this.messages.push(message)
+      this.mc.nativeElement.scrollTop = this.mc.nativeElement.scrollHeight
+    })  
   }
 
 }
