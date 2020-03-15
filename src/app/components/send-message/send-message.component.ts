@@ -8,10 +8,16 @@ import { ChatService } from 'src/app/chat.service';
 })
 export class SendMessageComponent {
   message = '';
+  message_error = false
   constructor(private chat:ChatService) { }
 
   SendMessage() {
-    this.chat.SendMessage( this.message )
-    this.message = ''
+    if( this.message.length ){
+      this.chat.SendMessage( this.message )
+      this.message = ''
+      this.message_error = false
+    }else{
+      this.message_error = true
+    }
   }
 }

@@ -1,6 +1,9 @@
 <div class="send-chat">
   <div class="box">
     <input matInput style="border: none;" type="text" [(ngModel)]="message" placeholder="Write a message">
+    <mat-error *ngIf="message_error">
+      Please write a message
+    </mat-error>
     <button mat-button matSuffix mat-icon-button aria-label="Send" (click)="SendMessage()">
       <mat-icon>send</mat-icon>
     </button>
